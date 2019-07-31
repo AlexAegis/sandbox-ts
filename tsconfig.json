@@ -1,0 +1,28 @@
+{
+	"compilerOptions": {
+		"lib": ["es2017", "esnext.asynciterable"],
+		"module": "commonjs",
+		"target": "esnext",
+		"rootDir": "./src/",
+		"outDir": "./dist/",
+		"sourceMap": true,
+		"noUnusedLocals": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noUnusedParameters": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictPropertyInitialization": true,
+		"baseUrl": "./",
+		"paths": {
+			"@root": ["src"],
+			"@root/*": ["src/*"],
+			"@2015/*": ["src/2015/*"],
+			"@2018/*": ["src/2018/*"]
+		},
+		"typeRoots": ["./node_modules/@types"]
+	},
+	"include": ["./src/**/*"],
+	"exclude": ["**/node_modules/**/*"]
+}
