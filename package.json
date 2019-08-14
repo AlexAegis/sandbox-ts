@@ -32,13 +32,14 @@
 	"license": "mit",
 	"private": true,
 	"dependencies": {
+		"moment": "^2.24.0",
 		"rxjs": "^6.5.2",
 		"workerpool": "^3.1.2"
 	},
 	"devDependencies": {
-		"@types/chai": "^4.1.7",
+		"@types/chai": "^4.2.0",
 		"@types/mocha": "^5.2.7",
-		"@types/node": "^12.6.8",
+		"@types/node": "^12.7.1",
 		"@types/workerpool": "^3.1.0",
 		"chai": "^4.2.0",
 		"codecov": "^3.5.0",
