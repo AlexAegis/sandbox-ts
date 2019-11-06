@@ -34,24 +34,24 @@
 	"dependencies": {
 		"moment": "^2.24.0",
 		"rxjs": "^6.5.2",
-		"workerpool": "^3.1.2"
+		"workerpool": "^5.0.2"
 	},
 	"devDependencies": {
 		"@types/chai": "^4.2.0",
 		"@types/mocha": "^5.2.7",
 		"@types/node": "^12.7.1",
-		"@types/workerpool": "^3.1.0",
+		"@types/workerpool": "^5.0.0",
 		"chai": "^4.2.0",
 		"codecov": "^3.5.0",
 		"mocha": "^6.2.0",
 		"nyc": "^14.1.1",
 		"prettier": "^1.18.2",
 		"source-map-support": "^0.5.13",
-		"ts-node": "8.3.0",
+		"ts-node": "8.4.1",
 		"tsconfig-paths": "^3.8.0",
-		"tslint": "~5.18.0",
+		"tslint": "~5.20.1",
 		"tslint-plugin-prettier": "^2.0.1",
-		"typescript": "3.5.3"
+		"typescript": "3.7.2"
 	},
 	"nyc": {
 		"extension": [
