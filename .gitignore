@@ -63,8 +63,12 @@ typings/
 # scratchfile
 scratchpad
 
-
-
 # Rust
-
 target
+
+# my scratchpad folder
+!src/scratchpad
+# should not contain anything
+src/scratchpad/*
+# but this file
+!src/scratchpad/.gitkeep
