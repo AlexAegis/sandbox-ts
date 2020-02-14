@@ -16,6 +16,7 @@
 		"e2e": "test",
 		"target": "dist",
 		"rust": "delta",
+		"scope": "delta",
 		"benches": "benchmark"
 	},
 	"material-icon-theme.files.associations": {
@@ -40,5 +41,7 @@
 	"rust.build_on_save": true,
 	"rust.clippy_preference": "on",
 	"rust.racer_completion": true,
-	"rust.show_hover_context": true
+	"rust.show_hover_context": true,
+	"editor.semanticHighlighting.enabled": true,
+	"debug.javascript.usePreview": true
 }
