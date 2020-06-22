@@ -78,7 +78,7 @@ ReplaySubject(1) but with a default value. This means that this subject
 will always have something in it. And because of this you can access it
 synchronously. With `.value`.
 
-## shareRelpay
+## shareReplay
 
 Now you can probably figure this one out yourself.
 its the same as share but with a ReplaySubject.
