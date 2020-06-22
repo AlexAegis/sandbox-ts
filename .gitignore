@@ -72,3 +72,5 @@ target
 src/scratchpad/*
 # but this file
 !src/scratchpad/.gitkeep
+
+dist
