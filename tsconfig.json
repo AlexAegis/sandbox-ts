@@ -5,24 +5,15 @@
 		"target": "es2020",
 		"rootDir": "./src/",
 		"outDir": "./dist/",
-		"sourceMap": true,
-		"noUnusedLocals": true,
-		"noImplicitAny": true,
-		"noImplicitReturns": true,
-		"noImplicitThis": true,
-		"noUnusedParameters": true,
-		"strictNullChecks": true,
-		"strictFunctionTypes": true,
-		"strictPropertyInitialization": true,
+		"sourceMap": false,
+		"strict": false,
 		"baseUrl": "./",
 		"paths": {
 			"@root": ["src"],
-			"@root/*": ["src/*"],
-			"@2015/*": ["src/2015/*"],
-			"@2018/*": ["src/2018/*"]
+			"@root/*": ["src/*"]
 		},
 		"typeRoots": ["./node_modules/@types"]
 	},
 	"include": ["./src/**/*"],
-	"exclude": ["**/node_modules/**/*"]
+	"exclude": ["./node_modules/**/*"]
 }
