@@ -11,7 +11,7 @@
 	"homepage": "https://github.com/AlexAegis",
 	"bugs": {
 		"email": "alexaegis@gmail.com",
-		"url": "https://github.com/AlexAegis/advent-of-code/issues"
+		"url": "https://github.com/AlexAegis/ts-sandbox/issues"
 	},
 	"scripts": {
 		"lint": "tslint --project .",
