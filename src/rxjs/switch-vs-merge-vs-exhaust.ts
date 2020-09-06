@@ -1,32 +1,23 @@
-import { of, timer, merge, Subject, interval, forkJoin } from 'rxjs';
+import { of, timer, merge, Subject, interval, forkJoin, Observable } from 'rxjs';
 import { mergeMap, mapTo, switchMap, exhaustMap, takeUntil, startWith } from 'rxjs/operators';
 
-const currentTimestamp = (andSome = 0) => new Date().getTime() + andSome;
+const emitNowAndWhenExpired = (time: number): Observable<boolean> => {
+	// If already expired, just return that
+	if (time - new Date().getTime() < 0) {
+		return of(true);
+	} else {
+		// If not, return that is not and a timer that will emit when it does
+		return merge(of(false), timer(new Date(time)).pipe(mapTo(true)));
+	}
+};
 
 const time$ = new Subject<number>();
-const isExpired = (time: number) => time - currentTimestamp() < 0;
 
-/**
- * Here the difference between switchMap, mergeMap, and exhaustMap is visible
- * really well
- */
-const isExpiredSwitchMap$ = time$.pipe(
-	switchMap((time) => {
-		return merge(of(isExpired(time)), timer(time - currentTimestamp()).pipe(mapTo(true)));
-	})
-);
+const isExpiredSwitchMap$ = time$.pipe(switchMap(emitNowAndWhenExpired));
 
-const isExpiredMergeMap$ = time$.pipe(
-	mergeMap((time) => {
-		return merge(of(isExpired(time)), timer(time - currentTimestamp()).pipe(mapTo(true)));
-	})
-);
+const isExpiredMergeMap$ = time$.pipe(mergeMap(emitNowAndWhenExpired));
 
-const isExpiredExhaustMap$ = time$.pipe(
-	exhaustMap((time) => {
-		return merge(of(isExpired(time)), timer(time - currentTimestamp()).pipe(mapTo(true)));
-	})
-);
+const isExpiredExhaustMap$ = time$.pipe(exhaustMap(emitNowAndWhenExpired));
 
 // This stream will only emit when all 3 completes
 const allFinished$ = forkJoin([isExpiredSwitchMap$, isExpiredMergeMap$, isExpiredExhaustMap$]);
@@ -41,12 +32,12 @@ isExpiredExhaustMap$.subscribe((n) => console.log('isExpiredExhaustMap', n));
 
 // A little delay to make sure the time logs appear before others
 setTimeout(() => {
-	time$.next(currentTimestamp(3000));
+	time$.next(new Date().getTime() + 3000);
 
 	// Wait a second and then send in a 4 second time, then complete the subject
 	// signaling that no more values will be emitted
 	setTimeout(() => {
-		time$.next(currentTimestamp(4000));
+		time$.next(new Date().getTime() + 4000);
 		// the other pipelines will only complete once the source completes.
 		time$.complete();
 	}, 1000);
@@ -63,8 +54,9 @@ setTimeout(() => {
  *
  * time 1
  * After a second, a new value is added to the subject that will expire at the
- * 5th tick. But only switch and merge emitted. Its because exhaust doesn't
- * care about incoming values until the inner observable is finished!
+ * 5th tick. But only switch and merge emitted. It's because exhaust doesn't
+ * care about incoming values until the inner observable is finished! And that
+ * timer in there is till ticking for another 2 seconds.
  *
  * isExpiredSwitchMap false
  * isExpiredMergeMap false
@@ -86,8 +78,8 @@ setTimeout(() => {
  *
  * time 5
  * And finally at the sixth tick, the new value expired, switch and merge
- * emitted beause only they recieved the new value, exhaust was busy with the
- * previous one.
+ * emitted because only they received the new value, exhaust did not emit the
+ * expiration of the second value because it was busy with the previous one.
  *
  * isExpiredSwitchMap true
  * isExpiredMergeMap true
