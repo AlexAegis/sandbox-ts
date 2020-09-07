@@ -1,4 +1,0 @@
-[submodule ".vscode"]
-	path = .vscode
-	url = https://github.com/AlexAegis/.vscode
-	branch = typescript
