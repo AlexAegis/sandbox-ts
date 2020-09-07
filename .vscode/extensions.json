@@ -1,0 +1,19 @@
+{
+	"recommendations": [
+		"editorconfig.editorconfig",
+		"eamodio.gitlens",
+		"mhutchie.git-graph",
+		"Gruntfuggly.todo-tree",
+		"aaron-bond.better-comments",
+		"esbenp.prettier-vscode",
+		"pkief.material-icon-theme",
+		"DavidAnson.vscode-markdownlint",
+		"npxms.hide-gitignored",
+		"equinusocio.vsc-community-material-theme",
+		"pkief.material-icon-theme",
+		"msjsdiag.debugger-for-chrome",
+		"ms-vscode.vscode-typescript-tslint-plugin",
+		"wix.vscode-import-cost",
+		"hbenl.vscode-mocha-test-adapter"
+	]
+}
