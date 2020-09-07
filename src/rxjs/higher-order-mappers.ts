@@ -21,7 +21,7 @@ const isExpiredExhaustMap$ = time$.pipe(exhaustMap(emitNowAndWhenExpired));
 
 const isExpiredConcatMap$ = time$.pipe(concatMap(emitNowAndWhenExpired));
 
-// This stream will only emit when all 3 completes
+// This stream will only emit when all 4 completes
 const allFinished$ = forkJoin([isExpiredSwitchMap$, isExpiredMergeMap$, isExpiredExhaustMap$, isExpiredConcatMap$]);
 
 interval(1000)
