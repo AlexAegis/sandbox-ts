@@ -1,10 +1,9 @@
 {
 	"compilerOptions": {
-		"lib": ["es2017", "esnext.asynciterable", "dom"],
+		"lib": ["es2020", "dom"],
 		"module": "commonjs",
 		"target": "es2020",
 		"rootDir": "./src/",
-		"outDir": "./dist/",
 		"sourceMap": false,
 		"strict": false,
 		"baseUrl": "./",
@@ -12,8 +11,8 @@
 			"@root": ["src"],
 			"@root/*": ["src/*"]
 		},
-		"typeRoots": ["./node_modules/@types"]
+		"typeRoots": ["node_modules/@types"]
 	},
-	"include": ["./src/**/*"],
-	"exclude": ["./node_modules/**/*"]
+	"include": ["src/**/*"],
+	"exclude": ["node_modules"]
 }
