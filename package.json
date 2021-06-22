@@ -34,26 +34,26 @@
 	"private": true,
 	"dependencies": {
 		"moment": "^2.29.1",
-		"rxjs": "^6.6.3",
-		"workerpool": "^6.1.0"
+		"rxjs": "^7.1.0",
+		"workerpool": "^6.1.5"
 	},
 	"devDependencies": {
-		"@types/chai": "^4.2.15",
-		"@types/mocha": "^8.2.1",
-		"@types/node": "^14.14.28",
+		"@types/chai": "^4.2.19",
+		"@types/mocha": "^8.2.2",
+		"@types/node": "^15.12.4",
 		"@types/workerpool": "^6.0.0",
-		"chai": "^4.3.0",
-		"codecov": "^3.8.1",
-		"mocha": "^8.3.0",
-		"npm-check-updates": "^11.1.4",
+		"chai": "^4.3.4",
+		"codecov": "^3.8.2",
+		"mocha": "^9.0.1",
+		"npm-check-updates": "^11.7.1",
 		"nyc": "^15.1.0",
-		"prettier": "^2.2.1",
+		"prettier": "^2.3.1",
 		"source-map-support": "^0.5.19",
-		"ts-node": "9.1.1",
+		"ts-node": "10.0.0",
 		"tsconfig-paths": "^3.9.0",
 		"tslint": "~6.1.3",
 		"tslint-plugin-prettier": "^2.3.0",
-		"typescript": "4.1.5"
+		"typescript": "4.3.4"
 	},
 	"nyc": {
 		"extension": [
