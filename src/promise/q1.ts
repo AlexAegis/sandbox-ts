@@ -1,24 +1,24 @@
 function job() {
-	return new Promise(function(resolve, reject) {
+	return new Promise(function (resolve, reject) {
 		reject();
 	});
 }
 
-let promise = job();
+const promise = job();
 
 promise
-	.then(function() {
+	.then(function () {
 		console.log('Success 1');
 	})
-	.then(function() {
+	.then(function () {
 		console.log('Success 2');
 	})
-	.then(function() {
+	.then(function () {
 		console.log('Success 3');
 	})
-	.catch(function() {
+	.catch(function () {
 		console.log('Error 1');
 	})
-	.then(function() {
+	.then(function () {
 		console.log('Success 4');
 	});

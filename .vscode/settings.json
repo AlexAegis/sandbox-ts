@@ -1,4 +1,6 @@
 {
+	"deno.enable": false,
+	"deno.lint": false,
 	"editor.tabSize": 4,
 	"editor.formatOnSave": true,
 	"editor.autoIndent": "full",
@@ -17,17 +19,27 @@
 		"coverage": true
 	},
 	"editor.rulers": [
-		{ "column": 80, "color": "#ffffff10" },
-		{ "column": 120, "color": "#6666668e" }
+		{
+			"column": 80,
+			"color": "#ffffff10"
+		},
+		{
+			"column": 120,
+			"color": "#6666668e"
+		}
 	],
 	"editor.codeActionsOnSave": {
-		"source.fixAll": true
+		"source.fixAll": true,
+		"source.organizeImports": true,
+		"source.fixAll.eslint": true,
+		"source.fixAll.stylelint": true
 	},
+	"prettier.prettierPath": "node_modules/prettier",
 	"prettier.tabWidth": 4,
 	"prettier.useTabs": true,
-	"files.associations": { ".mocharc": "json" },
-	"debug.javascript.usePreview": true,
-	"tslint.alwaysShowRuleFailuresAsWarnings": true,
+	"files.associations": {
+		".mocharc": "json"
+	},
 	"typescript.tsdk": "node_modules\\typescript\\lib",
 	"material-icon-theme.folders.associations": {
 		"module": "font",
@@ -50,5 +62,9 @@
 	},
 	"mochaExplorer.optsFile": "./mocha.opts",
 	"mochaExplorer.files": "src/**/*.spec.ts",
-	"mochaExplorer.mochaPath": "node_modules/mocha"
+	"mochaExplorer.mochaPath": "node_modules/mocha",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }

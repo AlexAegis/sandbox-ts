@@ -1,17 +1,26 @@
 {
 	"compilerOptions": {
-		"lib": ["es2020", "dom"],
+		"strict": true,
+		"rootDir": ".",
+		"sourceMap": true,
+		"declaration": false,
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"importHelpers": false,
+		"target": "es2021",
 		"module": "commonjs",
-		"target": "es2020",
-		"rootDir": "./src/",
-		"sourceMap": false,
-		"strict": false,
-		"baseUrl": "./",
+		"resolveJsonModule": true,
+		"typeRoots": ["node_modules/@types"],
+		"lib": ["es2021", "dom"],
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true,
+		"baseUrl": ".",
 		"paths": {
 			"@root": ["src"],
 			"@root/*": ["src/*"]
-		},
-		"typeRoots": ["node_modules/@types"]
+		}
 	},
 	"include": ["src/**/*"],
 	"exclude": ["node_modules"]

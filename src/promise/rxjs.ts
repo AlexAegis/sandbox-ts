@@ -1,21 +1,24 @@
 export default {};
 
-import { combineLatest, interval, Observable, ReplaySubject, Subject, zip } from 'rxjs';
+import { interval, Observable, Observer, ReplaySubject } from 'rxjs';
 import { map, take } from 'rxjs/operators';
 
-const o = new Observable(r => {
+const o = new Observable<string>((r) => {
 	r.next('Hello');
 	r.next('Hello1');
 	r.next('Hello2');
 });
 
+o.subscribe((v) => console.log(v));
+
 const s = new ReplaySubject<number>(43);
 
 const loggerSubscriber = {
-	next: r => {
+	next: (r) => {
 		console.log(r);
-	}
-};
+	},
+} as Observer<unknown>;
+
 interval(100)
 	.pipe(
 		map((a: number) => a + 2),

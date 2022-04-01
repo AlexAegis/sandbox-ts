@@ -1,7 +1,7 @@
 /**
  * Simple solution
  */
-export const fizzBuzz = (until: number = 100): void => {
+export const fizzBuzz = (until = 100): void => {
 	const toFizzBuzz = (i: number): number | string => {
 		const t = i % 3 === 0;
 		const f = i % 5 === 0;

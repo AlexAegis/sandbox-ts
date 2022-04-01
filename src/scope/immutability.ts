@@ -13,8 +13,8 @@ console.log(b); // 1
 const obj = {
 	foo: 'A string',
 	bar: {
-		hello: 124
-	}
+		hello: 124,
+	},
 };
 
 obj.foo = 'Another string'; // totally valid, only the reference of that object is const
@@ -31,7 +31,7 @@ interface ReadonlyObjectType {
 }
 
 const readonlyObj: ReadonlyObjectType = {
-	c: 12
+	c: 12,
 };
 
 // Cannot assign to 'c' because it is a read-only property.ts(2540)

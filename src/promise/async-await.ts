@@ -1,7 +1,7 @@
 export default {};
 
 (async () => {
-	const p = new Promise(resolve => {
+	const p = new Promise((resolve) => {
 		setTimeout(() => resolve(12), 1200);
 	});
 	console.log('a');

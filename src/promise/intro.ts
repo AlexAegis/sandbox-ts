@@ -2,7 +2,7 @@ export default {};
 
 let a = 10;
 
-const t = setTimeout(() => {
+setTimeout(() => {
 	console.log(30);
 	a = 30;
 	return 30;

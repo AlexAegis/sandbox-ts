@@ -8,9 +8,7 @@ export class MyClass {
 		console.log(this);
 	}
 
-	normalFieldFunction = function(this: any) {
-		// this is just for typescript, would do the same in ES6
-		// npx tsc --project ../../tsconfig.json
+	normalFieldFunction = function (this: MyClass) {
 		console.log(this);
 	};
 

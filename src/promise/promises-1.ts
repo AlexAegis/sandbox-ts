@@ -6,4 +6,4 @@ const p = new Promise(() => {
 
 console.log(p);
 
-p.then(r => console.log('Hello?', r)); // what
+p.then((r) => console.log('Hello?', r)); // what

@@ -8,7 +8,7 @@ function callCounterFactory() {
 	};
 }
 
-let callCounter = callCounterFactory();
+const callCounter = callCounterFactory();
 // the field counter is not accessible
 console.log(callCounter());
 console.log(callCounter());

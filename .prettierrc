@@ -3,8 +3,6 @@
 	"useTabs": true,
 	"singleQuote": true,
 	"printWidth": 100,
-	"eslintIntegration": true,
-	"jsonEnable": true,
 	"overrides": [
 		{
 			"files": "*.md",

@@ -26,3 +26,5 @@ export type FlatModel<T extends Model, K extends keyof T = keyof T> =
 
 const bar: BarModel = { foo: { id: 1, name: '' }, id: 1, name: '', foos: [] };
 const bar2: FlatModel<BarModel, 'foo'> = { foo: 1, foos: [], id: 2, name: '' };
+
+console.log(bar, bar2);

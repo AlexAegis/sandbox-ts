@@ -1,9 +1,11 @@
 /**
  * Expandable solution
  */
-export const fizzBuzz = (until: number = 100): void => {
-	const makeRule = (condition: (i: number) => boolean, result: string) => (i: number): string =>
-		condition(i) ? result : '';
+export const fizzBuzz = (until = 100): void => {
+	const makeRule =
+		(condition: (i: number) => boolean, result: string) =>
+		(i: number): string =>
+			condition(i) ? result : '';
 	const rules = [makeRule((i) => i % 3 === 0, 'Fizz'), makeRule((i) => i % 5 === 0, 'Buzz')];
 
 	const applyRules = (i: number): string | number =>

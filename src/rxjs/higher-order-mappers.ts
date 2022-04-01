@@ -1,5 +1,13 @@
 import { of, timer, merge, Subject, interval, forkJoin, Observable } from 'rxjs';
-import { mergeMap, mapTo, switchMap, exhaustMap, takeUntil, startWith, concatMap } from 'rxjs/operators';
+import {
+	mergeMap,
+	mapTo,
+	switchMap,
+	exhaustMap,
+	takeUntil,
+	startWith,
+	concatMap,
+} from 'rxjs/operators';
 
 const emitNowAndWhenExpired = (time: number): Observable<boolean> => {
 	// If already expired, just return that
@@ -22,7 +30,12 @@ const isExpiredExhaustMap$ = time$.pipe(exhaustMap(emitNowAndWhenExpired));
 const isExpiredConcatMap$ = time$.pipe(concatMap(emitNowAndWhenExpired));
 
 // This stream will only emit when all 4 completes
-const allFinished$ = forkJoin([isExpiredSwitchMap$, isExpiredMergeMap$, isExpiredExhaustMap$, isExpiredConcatMap$]);
+const allFinished$ = forkJoin([
+	isExpiredSwitchMap$,
+	isExpiredMergeMap$,
+	isExpiredExhaustMap$,
+	isExpiredConcatMap$,
+]);
 
 interval(1000)
 	.pipe(startWith(-1), takeUntil(allFinished$))

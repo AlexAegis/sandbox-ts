@@ -1,5 +1,6 @@
 const a = 'module level\n';
 
+// eslint-disable-next-line no-constant-condition
 if (true) {
 	console.log(a);
 	// tslint:disable-next-line: no-var-keyword prefer-const
@@ -14,10 +15,3 @@ if (true) {
 }
 
 console.log(a, b, c);
-
-if (false) {
-	// tslint:disable-next-line: no-var-keyword prefer-const
-	var d = 'I never get to run with the others..';
-}
-
-// console.log(d); // undefined

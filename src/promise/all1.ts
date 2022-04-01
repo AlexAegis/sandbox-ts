@@ -1,15 +1,15 @@
 export default {};
 console.time('All start');
 
-const p1 = new Promise(res => {
+const p1 = new Promise((res) => {
 	setTimeout(() => res('a'), 1000);
 });
 
-const p2 = new Promise(res => {
+const p2 = new Promise((res) => {
 	setTimeout(() => res('b'), 1500);
 });
 
-const p3 = new Promise((res, rej) => {
+const p3 = new Promise((res, _rej) => {
 	setTimeout(() => res('c'), 2000);
 });
 

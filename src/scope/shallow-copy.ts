@@ -1,11 +1,10 @@
-import { ObjectUnsubscribedError } from 'rxjs';
-
 export default {};
+
 const foo = {
 	a: 1,
 	obj: {
-		b: 3
-	}
+		b: 3,
+	},
 };
 
 const bar = { ...foo };

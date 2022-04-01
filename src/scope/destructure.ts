@@ -19,11 +19,11 @@ dest(tup);
 const obj = {
 	aa: 1,
 	bb: 2,
-	cc: 3
+	cc: 3,
 };
 
 // const { aa, bb, cc } = obj;
 
 of(obj)
 	.pipe(map(({ aa }) => aa))
-	.subscribe(a => console.log(a));
+	.subscribe((a) => console.log(a));

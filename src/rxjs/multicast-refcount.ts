@@ -1,5 +1,4 @@
-import { of, Subject, ConnectableObservable } from 'rxjs';
-import { multicast, refCount } from 'rxjs/operators';
+import { multicast, of, refCount, Subject } from 'rxjs';
 
 const o1 = of(1, 2, 3);
 
