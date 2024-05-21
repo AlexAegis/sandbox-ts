@@ -6,7 +6,6 @@ const x = 5; // Initialize x
 const foo = x + ' ' + y; // (lint errors)
 console.log(foo); // 5 undefined
 
-// eslint-disable-next-line no-var
 var y = 7; // Initialize y
 
 const a = 5; // Initialize a
@@ -16,5 +15,4 @@ b = 7; // valid because declared in this scope, albeit in a hoisted form
 const bar = a + ' ' + b; // (no lint errors)
 console.log(bar); // 5 7
 
-// eslint-disable-next-line no-var
 var b; // Declare b
