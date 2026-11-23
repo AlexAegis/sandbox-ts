@@ -8,7 +8,6 @@
 		"@alexaegis/ts",
 		"@commitlint/config-conventional",
 		"@lcov-viewer/cli",
-		"@pakk/cli",
 		"@sveltejs/*",
 		"@types/eslint",
 		"@types/node",
@@ -39,6 +38,7 @@
 		"turbo-ignore",
 		"typedoc",
 		"typescript",
+		"vite",
 		"vitest"
 	],
 	"skip-missing": true

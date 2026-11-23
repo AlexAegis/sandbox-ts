@@ -2,7 +2,7 @@ import { Observable, Subject, forkJoin, interval, merge, of, timer } from 'rxjs'
 import {
 	concatMap,
 	exhaustMap,
-	mapTo,
+	map,
 	mergeMap,
 	startWith,
 	switchMap,
@@ -11,10 +11,10 @@ import {
 
 const emitNowAndWhenExpired = (time: number): Observable<boolean> => {
 	// If already expired, just return that
-	return time - Date.now() < 0
+	return time < Date.now()
 		? of(true)
 		: // If not, return that is not and a timer that will emit when it does
-			merge(of(false), timer(new Date(time)).pipe(mapTo(true)));
+			merge(of(false), timer(new Date(time)).pipe(map(() => true)));
 };
 
 const time$ = new Subject<number>();

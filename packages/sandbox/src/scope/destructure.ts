@@ -11,6 +11,7 @@ console.log(axis, x, y);
 
 function dest([axis, x, y]: AxisWithCoord) {
 	console.log(axis, x, y);
+	// eslint-disable-next-line no-useless-assignment
 	axis = 'X';
 }
 

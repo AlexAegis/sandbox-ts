@@ -2,9 +2,8 @@ const fizzBuzzer = (i: number): number | string => {
 	const t = i % 3 === 0;
 	const f = i % 5 === 0;
 	if (t && f) return 'FizzBuzz';
-	else if (t) return 'Fizz';
-	else if (f) return 'Buzz';
-	else return i;
+	if (t) return 'Fizz';
+	return f ? 'Buzz' : i;
 };
 
 /**

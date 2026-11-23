@@ -4,7 +4,7 @@ export class Node<T> {
 	public constructor(public value: T) {}
 
 	public invert(): this {
-		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, @typescript-eslint/no-non-null-assertion, @typescript-eslint/no-non-null-asserted-optional-chain
+		// eslint-disable-next-line no-constant-binary-expression, unicorn/no-unreadable-array-destructuring, @typescript-eslint/no-non-null-assertion, @typescript-eslint/no-non-null-asserted-optional-chain
 		return ([this.left, this.right] = [this.right?.invert()!, this.left?.invert()!]) && this;
 	}
 

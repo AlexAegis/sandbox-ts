@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-deprecated */
 import { of, Subject, ConnectableObservable } from 'rxjs';
 import { multicast } from 'rxjs/operators';
 

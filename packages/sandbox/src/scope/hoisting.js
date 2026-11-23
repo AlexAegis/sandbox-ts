@@ -6,6 +6,7 @@ const x = 5; // Initialize x
 const foo = x + ' ' + y; // (lint errors)
 console.log(foo); // 5 undefined
 
+// eslint-disable-next-line no-useless-assignment
 var y = 7; // Initialize y
 
 const a = 5; // Initialize a

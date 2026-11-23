@@ -5,15 +5,7 @@ function getReq() {
 	});
 }
 
-await getReq().then((e) => {
-	console.log(e);
-});
-await getReq().then((e) => {
-	console.log(e);
-});
-await getReq().then((e) => {
-	console.log(e);
-});
-await getReq().then((e) => {
-	console.log(e);
-});
+console.log(await getReq());
+console.log(await getReq());
+console.log(await getReq());
+console.log(await getReq());

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-deprecated */
 import { multicast, of, refCount, Subject } from 'rxjs';
 
 const o1 = of(1, 2, 3);

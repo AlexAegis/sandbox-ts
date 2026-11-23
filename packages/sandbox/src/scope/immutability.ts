@@ -1,6 +1,7 @@
 export default {}; // this is just for declaring this file as a module
 
 // let - block scoped, let's you redefine it.
+// eslint-disable-next-line no-useless-assignment
 let a = 1;
 a = 2; // van be redefined
 console.log(a); // 2
@@ -17,6 +18,7 @@ const obj = {
 	},
 };
 
+// eslint-disable-next-line unicorn/no-immediate-mutation
 obj.foo = 'Another string'; // totally valid, only the reference of that object is const
 
 console.log(obj.foo); // Another string

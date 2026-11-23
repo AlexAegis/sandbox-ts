@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-this-outside-of-class */
 /**
  * @param {() => void} fn
  */

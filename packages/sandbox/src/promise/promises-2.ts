@@ -1,9 +1,8 @@
 export default {};
 
+// eslint-disable-next-line unicorn/prefer-promise-static-methods
 const p = new Promise((res) => {
 	res(10);
 });
 
-await p.then((r) => {
-	console.log(r);
-}); // 10
+console.log(await p); // 10

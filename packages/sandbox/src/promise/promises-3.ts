@@ -1,8 +1,7 @@
+/* eslint-disable unicorn/prefer-await */
 export default {};
 
-const p = new Promise((res) => {
-	res(10);
-});
+const p = Promise.resolve(10);
 
 await p
 	.then(() => 30) // 10
@@ -10,9 +9,7 @@ await p
 		console.log(r);
 	}); // undefined ??
 
-const p2 = new Promise((res) => {
-	res(20);
-});
+const p2 = Promise.resolve(20);
 
 await p2.then((r) => {
 	console.log(r);

@@ -1,7 +1,6 @@
+/* eslint-disable unicorn/prefer-await */
 function job() {
-	return new Promise(function (_resolve, reject) {
-		reject();
-	});
+	return Promise.reject(new Error('job failed'));
 }
 
 const promise = job();

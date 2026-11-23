@@ -18,10 +18,9 @@ function controlledRelease<T>(
 					// If semaphore is true, prepare all buffered and current events for emission
 					const eventsToEmit = [...acc.buffer, value];
 					return { buffer: [], eventsToEmit };
-				} else {
-					// If semaphore is false, buffer the current event
-					return { eventsToEmit: acc.eventsToEmit, buffer: [...acc.buffer, value] };
 				}
+				// If semaphore is false, buffer the current event
+				return { eventsToEmit: acc.eventsToEmit, buffer: [...acc.buffer, value] };
 			},
 			{ buffer: [] as T[], eventsToEmit: [] as T[] },
 		),

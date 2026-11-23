@@ -6,6 +6,4 @@ const p = new Promise(() => {
 
 console.log(p);
 
-await p.then((r) => {
-	console.log('Hello?', r);
-}); // what
+console.log('Hello?', await p); // what

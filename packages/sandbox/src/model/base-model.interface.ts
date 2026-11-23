@@ -21,8 +21,7 @@ export type ConvertModelPropertiesTo<T extends Model, P, K extends keyof T = key
 };
 
 export type FlatModel<T extends Model, K extends keyof T = keyof T> =
-	| ConvertModelPropertiesTo<T, number, K>
-	| Omit<T, K>;
+	ConvertModelPropertiesTo<T, number, K> | Omit<T, K>;
 
 const bar: BarModel = { foo: { id: 1, name: '' }, id: 1, name: '', foos: [] };
 const bar2: FlatModel<BarModel, 'foo'> = { foo: 1, foos: [], id: 2, name: '' };
